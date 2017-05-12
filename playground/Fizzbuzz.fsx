@@ -5,8 +5,9 @@
     | _ when (x % 5) = 0 -> "Buzz"
     | _ -> x.ToString()
 
-[1..100] 
-|> List.iter (fun number -> printfn "%s" (fizzBuzz number))
+[1..100]
+|> List.map (fun f -> fizzBuzz f)
+|> List.iter (printfn "%s")
 
 //Print the numbers from 1 to 100
 //If the number is divisible by 3 print “Fizz” instead
